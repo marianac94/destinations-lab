@@ -3,7 +3,7 @@ const app = express();
 const methodOVerride = require('method-override');
 const bodyParser = require('body-parser');
 
-
+require('./db/db');
 
 app.get('/', (req, res) => {
   res.send('Its aliveeeee')
