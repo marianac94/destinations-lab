@@ -5,11 +5,11 @@ const bodyParser = require('body-parser');
 
 require('./db/db');
 
-app.get('/', (req, res) => {
-  res.send('Its aliveeeee')
-});
+const destinationsController = require('./controllers/dC');
 
-
+// app.use(bodyParser.urlencoded({extended: false}));
+// app.use(methodOVerride('_method'));
+app.use('/destinations', destinationsController);
 
 
 
